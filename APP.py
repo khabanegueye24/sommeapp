@@ -1,7 +1,10 @@
 #Écrire un programme qui saisit deux notes d’un étudiant calcul et affiche la moyenne des notes.
 
-Not1 = int(input("sasir note1 :"))
-Not2 = int(input("sasir note2 :"))
-moyenne = note1 + note2
+import streamlit as st 
+num1 =  st.input_number(" num1 : ")
+num2 =  st.input_number(" num2 : ")
+somme = num1 + num2
 
-print(" la moyenne est de",moyenne)
+if st.button("résultat"):
+  st.info( somme )
+  
