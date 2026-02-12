@@ -1,11 +1,27 @@
-#Écrire un programme qui saisit deux notes d’un étudiant calcul et affiche la moyenne des notes.
+import streamlit as st
 
-import streamlit as st 
-num1 =  st.number_input(" num1 : ")
-num2 =  st.number_input(" num2 : ")
-somme = num1 + num2
+st.title(" Calculateur d'IMC")
 
-if st.button("résultat"):
-  st.info( somme )
-  
+poids = st.number_input("Poids (kg) " )
+taille_cm = st.number_input("Taille (cm) :", min_value=50.0, value=170.0, step=0.1)
+taille = taille_cm / 100  # Conversion en mètres
+
+if st.button("Calculer l'IMC"):
+    if taille > 0:
+        imc = poids / (taille ** 2)
+        st.success(f"Votre IMC est : **{imc:.2f}**")
+
+        if imc < 18.5:
+            categorie = "🔴 Maigreur"
+        elif imc < 25:
+            categorie = "🟢 Corpulence normale"
+        elif imc < 30:
+            categorie = "🟡 Surpoids"
+        else:
+            categorie = "🔴 Obésité"
+
+        st.info(f"**Catégorie : {categorie}**")
+    else:
+        st.error("La taille doit être supérieure à 0 !")
+
 
