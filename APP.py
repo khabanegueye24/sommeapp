@@ -36,22 +36,12 @@ st.sidebar.markdown("*Géomaticien - L2 en cours*")
 st.title("📋 **Curriculum Vitae**")
 st.markdown("**Khabane Guèye** - Géomaticien")
 
-## Langues
-st.header("🌐 **Langues**")
-col1, col2 = st.columns(2)
-with col1:
-    st.markdown("**Français**")
-    st.progress(1.0)
-with col2:
-    st.markdown("**Anglais**") 
-    st.progress(1.0)
-
 ## Compétences
 st.header("🎯 **Compétences**")
 competences = [
     "Maîtrise des techniques de levés topographiques",
     "Conception et mise en page de cartes thématiques de qualité professionnelle",
-    "Utilisation des instruments : Niveau, Station totale(rebotisée,manuelle), Drone, GPS",
+    "Utilisation des instruments : Niveau, Station totale, Drone, GPS",
     "Géo-référencement",
     "Implanter une base de données",
     "Capacité à implanter des projets (bâtiments, voirie) à partir de plans"
@@ -80,10 +70,23 @@ st.markdown("""
 **Centre d'entrepreneuriat et de développement technique (CEDT) le G15**  
 *Licence 1 en Géomatique*
 
-**2022 - 2023** 
+**2022 - 2023**  
 **Yatinga**  
 *Baccalauréat*
 """)
 
+## Langues (déplacé en bas)
+st.header("🌐 **Langues**")
+col1, col2 = st.columns(2)
+with col1:
+    st.markdown("**Français**")
+    st.progress(1.0)
+with col2:
+    st.markdown("**Wolof**") 
+    st.progress(1.0)
 
-
+# Footer
+st.markdown("---")
+col1, col2, col3 = st.columns(3)
+with col2:
+    st.markdown("**📍 Thiès, Sénégal**")
