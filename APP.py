@@ -80,7 +80,7 @@ st.markdown("""
 **Centre d'entrepreneuriat et de développement technique (CEDT) le G15**  
 *Licence 1 en Géomatique*
 
-**2022 - 2023**  
+**2022 - 2023** 
 **Yatinga**  
 *Baccalauréat*
 """)
@@ -90,4 +90,5 @@ st.markdown("---")
 col1, col2, col3 = st.columns(3)
 with col2:
     st.markdown("**📍 Thiès, Sénégal**")
+
 
