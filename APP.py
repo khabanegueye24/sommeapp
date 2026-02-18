@@ -1,27 +1,92 @@
 import streamlit as st
+import streamlit.components.v1 as components
 
-st.title(" Calculateur d'IMC")
+st.set_page_config(page_title="Mon CV", page_icon="📍", layout="wide")
 
-poids = st.number_input("Poids (kg) " )
-taille_cm = st.number_input("Taille (cm) :", min_value=50.0, value=170.0, step=0.1)
-taille = taille_cm / 100  # Conversion en mètres
+# Sidebar pour Contacts et Logiciels
+st.sidebar.header("📞 **Contacts**")
+st.sidebar.markdown("""
+**Adresse**  
+Thiès, Diamaguène, Rue 15
 
-if st.button("Calculer l'IMC"):
-    if taille > 0:
-        imc = poids / (taille ** 2)
-        st.success(f"Votre IMC est : **{imc:.2f}**")
+**Téléphone**  
+[+221 76 158 94 25](tel:+221761589425)
 
-        if imc < 18.5:
-            categorie = "🔴 Maigreur"
-        elif imc < 25:
-            categorie = "🟢 Corpulence normale"
-        elif imc < 30:
-            categorie = "🟡 Surpoids"
-        else:
-            categorie = "🔴 Obésité"
+**Email**  
+[khabanegueye020@gmail.com](mailto:khabanegueye020@gmail.com)
+""")
 
-        st.info(f"**Catégorie : {categorie}**")
-    else:
-        st.error("La taille doit être supérieure à 0 !")
+st.sidebar.header("💻 **Logiciels maîtrisés**")
+logiciels = [
+    "QGIS / ArcGIS",
+    "AutoCAD", 
+    "Python",
+    "Pix4D",
+    "Excel",
+    "PowerPoint",
+    "Erdas"
+]
+for logiciel in logiciels:
+    st.sidebar.markdown(f"• **{logiciel}**")
 
+st.sidebar.markdown("---")
+st.sidebar.markdown("*Géomaticien - L2 en cours*")
 
+# Main content
+st.title("📋 **Curriculum Vitae**")
+st.markdown("**Khabane Guèye** - Géomaticien")
+
+## Langues
+st.header("🌐 **Langues**")
+col1, col2 = st.columns(2)
+with col1:
+    st.markdown("**Français**")
+    st.progress(1.0)
+with col2:
+    st.markdown("**Wolof**") 
+    st.progress(1.0)
+
+## Compétences
+st.header("🎯 **Compétences**")
+competences = [
+    "Maîtrise des techniques de levés topographiques",
+    "Conception et mise en page de cartes thématiques de qualité professionnelle",
+    "Utilisation des instruments : Niveau, Station totale, Drone, GPS",
+    "Géo-référencement",
+    "Implanter une base de données",
+    "Capacité à implanter des projets (bâtiments, voirie) à partir de plans"
+]
+
+for comp in competences:
+    st.markdown(f"• **{comp}**")
+
+## Expériences Professionnelles
+st.header("💼 **Expériences Professionnelles**")
+
+st.subheader("**Juin - Septembre 2024**")
+st.markdown("**DIAM'O – Représentant commercial**")
+st.markdown("- Interroger les clients")
+st.markdown("- Faire connaître et vendre une eau spécifique")
+
+## Formation
+st.header("🎓 **Formation**")
+
+st.markdown("""
+**2025 - 2026**  
+**Centre d'entrepreneuriat et de développement technique (CEDT) le G15**  
+*Licence 2 en Géomatique (Formation en cours)*
+
+**2024 - 2025**  
+**Centre d'entrepreneuriat et de développement technique (CEDT) le G15**  
+*Licence 1 en Géomatique*
+
+**2022 - 2023**  
+**Yatinga**  
+*Baccalauréat*
+""")
+
+# Footer
+st.markdown("---")
+col1, col2, col3 = st.columns(3)
+with col2:
+    st.markdown("**📍 Thiès, Sénégal**")
