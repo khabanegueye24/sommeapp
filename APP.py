@@ -41,10 +41,10 @@ st.header("🎯 **Compétences**")
 competences = [
     "Maîtrise des techniques de levés topographiques",
     "Conception et mise en page de cartes thématiques de qualité professionnelle",
-    "Utilisation des instruments : Niveau, Station totale, Drone, GPS",
+    "Utilisation des instruments : Niveau, Station totale(manuelle,rebotisée), Drone, GPS",
     "Géo-référencement",
     "Implanter une base de données",
-    "Capacité à implanter des projets (bâtiments, voirie) à partir de plans"
+    
 ]
 
 for comp in competences:
@@ -82,11 +82,8 @@ with col1:
     st.markdown("**Français**")
     st.progress(1.0)
 with col2:
-    st.markdown("**Wolof**") 
+    st.markdown("**Anglais**") 
     st.progress(1.0)
 
-# Footer
-st.markdown("---")
-col1, col2, col3 = st.columns(3)
-with col2:
-    st.markdown("**📍 Thiès, Sénégal**")
+
+
