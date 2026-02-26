@@ -33,7 +33,7 @@ st.sidebar.markdown("---")
 st.sidebar.markdown("*Géomaticien - L2 en cours*")
 
 # Main content
-st.title("📋 **Curriculum Vitae**")
+st.title("**Curriculum Vitae**")
 st.markdown("**Khabane Gueye** - Géomaticien")
 
 ## Compétences
@@ -74,6 +74,7 @@ st.markdown("""
 **Yatinga**  
 *Baccalauréat*
 """)
+
 
 
 
