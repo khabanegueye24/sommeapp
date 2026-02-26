@@ -34,7 +34,7 @@ st.sidebar.markdown("*Géomaticien - L2 en cours*")
 
 # Main content
 st.title("📋 **Curriculum Vitae**")
-st.markdown("**Khabane Guèye** - Géomaticien")
+st.markdown("**Khabane Gueye** - Géomaticien")
 
 ## Compétences
 st.header("🎯 **Compétences**")
@@ -75,15 +75,6 @@ st.markdown("""
 *Baccalauréat*
 """)
 
-## Langues (déplacé en bas)
-st.header("🌐 **Langues**")
-col1, col2 = st.columns(2)
-with col1:
-    st.markdown("**Français**")
-    st.progress(1.0)
-with col2:
-    st.markdown("**Anglais**") 
-    st.progress(1.0)
 
 
 
